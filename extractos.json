@@ -1,0 +1,79 @@
+[
+    {
+        "cuenta": "1234567890",
+        "titular": "Juan Jose Diaz",
+        "saldo": 1250.75,
+        "transacciones": [
+          {
+            "fecha": "2024-09-01",
+            "descripcion": "Deposito en cajero automatico",
+            "monto": 500.00,
+            "tipo": "credito"
+          },
+          {
+            "fecha": "2024-09-05",
+            "descripcion": "Compra en supermercado",
+            "monto": -75.30,
+            "tipo": "debito"
+          },
+          {
+            "fecha": "2024-09-10",
+            "descripcion": "Transferencia recibida",
+            "monto": 200.00,
+            "tipo": "credito"
+          }
+        ]
+      },
+
+      {
+        "cuenta": "9876543210",
+        "titular": "Ana sofia",
+        "saldo": 4321.89,
+        "transacciones": [
+          {
+            "fecha": "2024-08-25",
+            "descripcion": "Pago de nomina",
+            "monto": 1500.00,
+            "tipo": "credito"
+          },
+          {
+            "fecha": "2024-08-28",
+            "descripcion": "Pago de alquiler",
+            "monto": -1200.00,
+            "tipo": "debito"
+          },
+          {
+            "fecha": "2024-09-01",
+            "descripcion": "Compra en libreria",
+            "monto": -45.75,
+            "tipo": "debito"
+          }
+        ]
+      },
+
+      {
+        "cuenta": "4567891230",
+        "titular": "Mateo Silva",
+        "saldo": 789.50,
+        "transacciones": [
+          {
+            "fecha": "2024-07-30",
+            "descripcion": "Deposito en efectivo",
+            "monto": 300.00,
+            "tipo": "credito"
+          },
+          {
+            "fecha": "2024-08-10",
+            "descripcion": "Pago de tarjeta de credito",
+            "monto": -200.00,
+            "tipo": "debito"
+          },
+          {
+            "fecha": "2024-08-15",
+            "descripcion": "Transferencia a ahorros",
+            "monto": -100.00,
+            "tipo": "debito"
+          }
+        ]
+      }
+]

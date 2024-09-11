@@ -3,21 +3,26 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class AppService {
 
+  data = require('../extractos.json')
+
   users = [
     { 
       email : 'juanjo@gmail.com',
       id: '123456',
-      address : 'calle 14G #34-45'
+      address : 'calle 14G #34-45',
+      extracto : this.data[0]
     },
     {
       email : 'sofiaLon@gmail.com',
       id: '122345',
-      address : 'carrera 2 #45-12'
+      address : 'carrera 2 #45-12',
+      extracto : this.data[1]
     },
     {
       email : 'mateo122@gmail.com',
       id: '123345',
-      address: 'Transversal 2 #45-54'
+      address: 'Transversal 2 #45-54',
+      extracto: this.data[2]
     }
   ]
 
@@ -58,8 +63,12 @@ export class AppService {
       return addresses.sort(() => Math.random() - 0.5);
    }
 
+    validateAddress(email:string, address:string): boolean {
+      const user = this.users.find(user => user.email === email);
 
-   //validateAddress(email:string, address)
+      return user.address === address;
+
+    }
 
 
 }

@@ -1,5 +1,6 @@
 import { Controller, Get, Param, Post } from '@nestjs/common';
 import { AppService } from './app.service';
+import { response } from 'express';
 
 @Controller()
 export class AppController {
@@ -13,13 +14,23 @@ export class AppController {
   }
 
   @Get('/users/:email')
-  userExistsByEmail(@Param('email') email: string ): boolean {
-    return this.appService.userExistsByEmail(email);
+  userExistsByEmail(@Param('email') email: string )  {
+    
+    if(this.appService.userExistsByEmail(email)) {
+      return {response: true}
+    } else { 
+      return {response: false}
+    }
   }
 
   @Get('/users/:email/:id')
   reportAdress(@Param('email') email: string, @Param('id') id: string){
     return this.appService.deployAddreses(email, id);
+  }
+
+  @Get('users/:email/:address')
+  validateAddress(@Param('email') email: string, @Param('address') address: string){
+    return this.appService.validateAddress(email,address);
   }
 
 }

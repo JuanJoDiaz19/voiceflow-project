@@ -3,9 +3,7 @@ import { extract } from 'extractos';
 
 @Injectable()
 export class AppService {
-
-  data = require('../extractos.txt')
-
+  
   users = [
     { 
       email : 'juanjo@gmail.com',

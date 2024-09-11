@@ -25,7 +25,7 @@ export class AppService {
     return this.users.some(user => user.email === email);
   }
 
-  // deployAddreses(): string[] {
-    
+  // deployAddreses(email: string, document:string): string[] {
+  //   const random_address = []
   // }
 }

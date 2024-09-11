@@ -28,7 +28,7 @@ export class AppController {
     return { addresses: this.appService.deployAddreses(email, id)};
   }
 
-  @Get('users/:email/:address')
+  @Get('/users/:email/validate/:address')
   validateAddress(@Param('email') email: string, @Param('address') address: string){
     return {exract: this.appService.validateAddress(email,address)};
   }

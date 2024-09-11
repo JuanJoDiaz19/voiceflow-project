@@ -71,6 +71,7 @@ export class AppService {
     validateAddress(email:string, address:string) {
       const user = this.users.find(user => user.email === email);
 
+      console.log(user)
       if(user.address === address){
         return user.extracto;
       }

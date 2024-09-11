@@ -3,26 +3,26 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 @Injectable()
 export class AppService {
 
-  data = require('../extractos.json')
+  data = require('../extractos.txt')
 
   users = [
     { 
       email : 'juanjo@gmail.com',
       id: '123456',
       address : 'calle 14G 34-45',
-      extracto : this.data[0]
+      extracto : this.data
     },
     {
       email : 'sofiaLon@gmail.com',
       id: '122345',
       address : 'carrera 2 45-12',
-      extracto : this.data[1]
+      extracto : this.data
     },
     {
       email : 'mateo122@gmail.com',
       id: '123345',
       address: 'Transversal 2 45-54',
-      extracto: this.data[2]
+      extracto: this.data
     }
   ]
 

@@ -1,3 +1,4 @@
+export const extract = `
 **Banco XYZ**  
 **Extracto de Cuenta**  
 Fecha de emisión: 10 de septiembre de 2024  
@@ -13,4 +14,4 @@ Resumen de movimientos:
 - **09/09/2024**: Retiro en cajero automático por $300,000. Saldo: $7,530,000.
 - **10/09/2024**: Pago de tarjeta de crédito por $500,000. Saldo: $7,030,000.
 
-**Saldo disponible al 10/09/2024**: $7,030,000.
+**Saldo disponible al 10/09/2024**: $7,030,000.`

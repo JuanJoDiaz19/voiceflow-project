@@ -9,19 +9,19 @@ export class AppService {
     { 
       email : 'juanjo@gmail.com',
       id: '123456',
-      address : 'calle 14G #34-45',
+      address : 'calle 14G 34-45',
       extracto : this.data[0]
     },
     {
       email : 'sofiaLon@gmail.com',
       id: '122345',
-      address : 'carrera 2 #45-12',
+      address : 'carrera 2 45-12',
       extracto : this.data[1]
     },
     {
       email : 'mateo122@gmail.com',
       id: '123345',
-      address: 'Transversal 2 #45-54',
+      address: 'Transversal 2 45-54',
       extracto: this.data[2]
     }
   ]
@@ -49,9 +49,9 @@ export class AppService {
 
      const random_after2 = Math.floor(Math.random() * 99) + 1;
 
-     const address1 = address_location1 + ' ' + random_before1 + ' #' + random_medium1 + '-' + random_after1;
+     const address1 = address_location1 + ' ' + random_before1  + random_medium1 + '-' + random_after1;
 
-     const address2 = address_location2 + ' ' + random_before2 + ' #' + random_medium2 + '-' + random_after2;
+     const address2 = address_location2 + ' ' + random_before2  + random_medium2 + '-' + random_after2;
      
      let address3 = '';
      
@@ -72,7 +72,7 @@ export class AppService {
       const user = this.users.find(user => user.email === email);
 
       console.log(user)
-      console.log(">>> Este es el Address:" + address);
+      console.log(">>> Este es el Address: " + address);
       if(user.address === address){
         return user.extracto;
       }

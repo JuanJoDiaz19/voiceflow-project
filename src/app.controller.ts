@@ -16,4 +16,10 @@ export class AppController {
   userExistsByEmail(@Param('email') email: string ): boolean {
     return this.appService.userExistsByEmail(email);
   }
+
+  @Get('/users/:email/:id')
+  reportAdress(@Param('email') email: string, @Param('id') id: string){
+    return this.appService.deployAddreses(email, id);
+  }
+
 }

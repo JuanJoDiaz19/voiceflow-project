@@ -30,7 +30,7 @@ export class AppController {
 
   @Get('users/:email/:address')
   validateAddress(@Param('email') email: string, @Param('address') address: string){
-    return this.appService.validateAddress(email,address);
+    return {exract: this.appService.validateAddress(email,address)};
   }
 
 }

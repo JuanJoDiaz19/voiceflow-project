@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
@@ -54,8 +54,13 @@ export class AppService {
      const address2 = address_location2 + ' ' + random_before2 + ' #' + random_medium2 + '-' + random_after2;
      
      let address3 = '';
-      if(this.users.some(user => user.email === email) && this.users.some(user => user.email === email)){
+     
+     const user = this.users.find(user => user.email === email)
+
+      if(user && user.id === document){
         address3 = this.users.find(user => user.email).address;
+      }else{
+        throw new NotFoundException('user not found');
       }
 
       const addresses = [address1, address2, address3];
@@ -63,10 +68,14 @@ export class AppService {
       return addresses.sort(() => Math.random() - 0.5);
    }
 
-    validateAddress(email:string, address:string): boolean {
+    validateAddress(email:string, address:string) {
       const user = this.users.find(user => user.email === email);
 
-      return user.address === address;
+      if(user.address === address){
+        return user.extracto;
+      }
+
+      return null;
 
     }
 

@@ -25,7 +25,7 @@ export class AppController {
 
   @Get('/users/:email/:id')
   reportAdress(@Param('email') email: string, @Param('id') id: string){
-    return this.appService.deployAddreses(email, id);
+    return { addresses: this.appService.deployAddreses(email, id)};
   }
 
   @Get('users/:email/:address')

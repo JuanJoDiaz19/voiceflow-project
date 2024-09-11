@@ -72,6 +72,7 @@ export class AppService {
       const user = this.users.find(user => user.email === email);
 
       console.log(user)
+      console.log(">>> Este es el Address:" + address);
       if(user.address === address){
         return user.extracto;
       }

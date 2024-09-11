@@ -17,9 +17,9 @@ export class AppController {
   userExistsByEmail(@Param('email') email: string )  {
     
     if(this.appService.userExistsByEmail(email)) {
-      return {response: true}
+      return {exists: 'true'}
     } else { 
-      return {response: false}
+      return {exists: 'false'}
     }
   }
 
